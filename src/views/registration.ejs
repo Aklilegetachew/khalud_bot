@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer and Product List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.2/antd.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Customer and Product List</h1>
+    <table class="ant-table ant-table-bordered">
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Step</th>
+          <th>Product ID</th>
+          <th>Product Description</th>
+          <th>Model Name</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(item => { %>
+          <tr>
+            <td><%= item.customerId || 'N/A' %></td>
+            <td><%= item.firstName || 'N/A' %></td>
+            <td><%= item.lastName || 'N/A' %></td>
+            <td><%= item.phoneNumber || 'N/A' %></td>
+            <td><%= item.email || 'N/A' %></td>
+            <td><%= item.step || 'N/A' %></td>
+            <td><%= item.productId || 'N/A' %></td>
+            <td><%= item.productDesc || 'N/A' %></td>
+            <td><%= item.modelName || 'N/A' %></td>
+            
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.2/antd.min.js"></script>
+</body>
+</html>
